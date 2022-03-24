@@ -39,6 +39,9 @@ body {
 .inputuser {
     position: relative;
 }
+.inputuser > label {
+    color: var(--cor0);
+}
 .usuario {
     border: none;
     background: none;
