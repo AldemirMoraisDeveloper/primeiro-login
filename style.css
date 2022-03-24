@@ -1,0 +1,82 @@
+
+:root {
+   --cor0: #b0b15f;
+   --cor1: #f1f2cd;
+   --cor2: rgb(250, 138, 98);
+   --cor3: rgb(204, 73, 25);
+   --cor4: rgb(49, 13, 2);
+
+   --fonte-padrao: cursive, sans-serif;
+   
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    background-image: url('./imagens/floresta.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   background-color: rgba(0, 0, 0, 0.4);
+   padding: 15px;
+   border-radius: 15px;
+   width: 25vw;
+   height: 38vh;
+}
+.login {
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--cor0);
+}
+.inputuser {
+    position: relative;
+}
+.usuario {
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid var(--cor0);
+    width: 100%;
+    font-size: 15px;
+    color: var(--cor1);
+    letter-spacing: 2px;
+}
+.user {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.usuario:focus ~ .user, .usuario:valid ~ .user {
+    top: -20px;
+    font-size: 12px;
+    color: var(--cor2);
+}
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: var(--cor3);
+    color: var(--cor4);
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .main {
+        width: 55vw;
+        height: 35vh;
+    }
+}
